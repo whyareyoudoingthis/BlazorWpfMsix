@@ -1,0 +1,41 @@
+@using Blazorise.Icons.Material
+@using Blazorise
+@inherits LayoutComponentBase
+
+<Layout Sider="true">
+    <LayoutSider>
+        <LayoutSiderContent>
+            <Bar Breakpoint="Breakpoint.Desktop" NavigationBreakpoint="Breakpoint.Tablet" ThemeContrast="ThemeContrast.Dark"
+                 Mode="BarMode.VerticalInline" CollapseMode="BarCollapseMode.Small">
+                <BarToggler />
+                <BarBrand>
+                    <BarItem>
+                        <BarLink To="/">
+                            <BarIcon IconName="MaterialIcons.ImportExport" />
+                            About
+                        </BarLink>
+                    </BarItem>
+                </BarBrand>
+                <BarMenu>
+                    <BarStart>
+                        <BarItem>
+                            <BarLink To="/sample">
+                                <BarIcon IconName="IconName.ChevronRight" />
+                                Export
+                            </BarLink>
+                        </BarItem>
+                    </BarStart>
+                    <BarEnd>
+                    </BarEnd>
+                </BarMenu>
+            </Bar>
+        </LayoutSiderContent>
+    </LayoutSider>
+    <Layout>
+        <LayoutHeader Fixed="true">
+        </LayoutHeader>
+        <LayoutContent Padding="Padding.Is4.OnAll">
+            @Body
+        </LayoutContent>
+    </Layout>
+</Layout>

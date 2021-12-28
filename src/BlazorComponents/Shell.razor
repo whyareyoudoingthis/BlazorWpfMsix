@@ -1,0 +1,26 @@
+@using Blazorise.Material
+@using BlazorComponents.Pages.Shared
+@using Microsoft.AspNetCore.Components.Routing
+@using Blazorise
+
+<Blazorise.ThemeProvider Theme="@theme">
+    <Router AppAssembly="@typeof(MainLayout).Assembly" PreferExactMatches="@true">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+        </Found>
+        <NotFound>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p>Sorry, there's nothing at this address.</p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</Blazorise.ThemeProvider>
+@code{
+    private Theme theme { get; set; }
+    
+    protected override async void OnInitialized()
+    {
+        theme = new Theme();
+        theme.ThemeHasChanged();
+    }
+}
