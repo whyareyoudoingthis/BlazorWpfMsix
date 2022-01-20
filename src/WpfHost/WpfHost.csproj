@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="6.0.101-preview.11.2349" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="6.0.200-preview.12.2441" />
 
     <PackageReference Include="Blazorise.Icons.Material" Version="0.9.5.3" />
     <PackageReference Include="Blazorise.Material" Version="0.9.5.3" />
